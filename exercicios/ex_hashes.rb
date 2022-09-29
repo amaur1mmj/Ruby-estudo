@@ -1,3 +1,6 @@
+require 'pry-byebug'
+
+
 family = {
     uncles: ['bob',"joe","steve"],
     sisters: ['jane',"jill","beth"],
@@ -23,11 +26,13 @@ p arr, last
 # ja o map sempre retorna um valor unico ou array 
 
 ok = family.map do  |k, v|
-   if k == :sisters
-        v[-2] = "BATATA"
-   else
-        v = v 
-   end
+
+    
+
+     if k == :sisters 
+          v[-2] = "BATATA" 
+     end
+     binding.pry
 end
 
 p immediate_family.class, ok.class, family[:sisters]
