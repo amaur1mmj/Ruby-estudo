@@ -10,6 +10,22 @@ my_hash = {
 
   # o metodo new tbm funciona aqui ...
 hash = Hash.new
+# quando é colocado um valor no Hash.new(12) < exemplo, 
+# ele deixa esse valor padrao para acessar todas as chaves que não existem no hash 
+
+hundreds = Hash.new(100)
+p hundreds["first"]         #=> 100
+p hundreds["mine"]          #=> 100
+p hundreds["yours"] 
+
+p hundreds
+
+hundreds = Hash.new(100)
+p hundreds["new"]           #=> 100
+p hundreds["new"] = 99
+p hundreds["new"]
+
+
 
 hash = {1=> "boa", :oshi => 77}
 
@@ -70,3 +86,4 @@ japanese_cars = {
 }
 
 p japanese_cars[:honda], american_cars[:chevrolet]
+
