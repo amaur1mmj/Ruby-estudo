@@ -28,6 +28,7 @@ end
   end
 
 # OPERADOR ESPACIAL, COISA LINDA
+# comapra ser e maior, igual ou menor da esquerda pra direita
 p 5 <=> 10    #=> -1
 p 10 <=> 10   #=> 0
 p 10 <=> 5    #=> 1
