@@ -1,48 +1,26 @@
-def alphabet
-    alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-end
 
-def ceasar_cipher(string, number_cipher)
-        alphabet = alphabet()
-        cipher = []
-        string = string.downcase
+def cipher_ceaser(text, shift)
 
-        for j in 0..string.length    
-            alphabet.each_with_index do |caracter, letter_index|        
+    for i in 0...text.length
+        char_asc = text[i].ord # pegar o valor ascii inteiro do caracter
+        rotate = shift > 0 ? 26 : -26
+
+        if char_asc >= 97 && char_asc <= 122 # verifica de a-z 
                 
-                if caracter == string[j]
-                    position = (letter_index + number_cipher) - alphabet.length         
-                        cipher.push(alphabet[position])
-                end
-                
-            end
-                    
+                char_asc += shift
+                char_asc -= rotate unless char_asc < 122 && char_asc > 97 # verifica se ultrapassa o intervalo 
+            
+        elsif char_asc >= 65 && char_asc <= 90 # verifica de A-Z
+            char_asc += shift
+            char_asc -= rotate unless char_asc < 90 && char_asc > 97 # verifica se ultrapassa o intervalo
         end
-        cipher.join
-
-end
-
-p string_criptograda = ceasar_cipher("amauri",5)
-
-
-
-def describe_ceasar_cipher(string,number_cipher)
-
-    alphabet = alphabet = alphabet()
-    decoded  = Array.new
-    for i in 0..string.length
-        alphabet.each_with_index do |caracter,index|
         
-            if caracter == string[i]
-                position = ( index - number_cipher)         
-                    decoded.push(alphabet[position])
-                
-            end
 
-        end
+        text[i] = char_asc.chr # retorna de inteiro pro valor vizual do caracter       
     end
-    return  decoded.join
+
+    text
 
 end
 
-puts string_original = describe_ceasar_cipher(string_criptograda,5)
+p cipher_ceaser("ABCxyz",-3)
