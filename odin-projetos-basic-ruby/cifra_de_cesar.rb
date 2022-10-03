@@ -1,7 +1,9 @@
-
+def alphabet
+    alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+end
 
 def ceasar_cipher(string, number_cipher)
-        alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+        alphabet = alphabet()
         cipher = []
         string = string.downcase
 
@@ -20,19 +22,19 @@ def ceasar_cipher(string, number_cipher)
 
 end
 
-p string_criptograda = ceasar_cipher("abcxyz",3)
+p string_criptograda = ceasar_cipher("amauri",5)
 
 
 
 def describe_ceasar_cipher(string,number_cipher)
 
-    alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    alphabet = alphabet = alphabet()
     decoded  = Array.new
     for i in 0..string.length
         alphabet.each_with_index do |caracter,index|
         
             if caracter == string[i]
-                position = (index - number_cipher) + alphabet.length         
+                position = ( index - number_cipher)         
                     decoded.push(alphabet[position])
                 
             end
@@ -43,4 +45,4 @@ def describe_ceasar_cipher(string,number_cipher)
 
 end
 
-puts string_original = describe_ceasar_cipher(string_criptograda,3)
+puts string_original = describe_ceasar_cipher(string_criptograda,5)
