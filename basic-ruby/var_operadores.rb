@@ -4,8 +4,8 @@ numero = 1
 p string, numero
 
 # += atribui o valor da variavel mais um adicional 
-num = 2
-p num+= 2
+num = 0
+p num+= 1
 num += num + 3 
 
 p num   
@@ -57,7 +57,7 @@ end
  # GERANDO VARIAVEL CONSTANTE(IMUTAVEL)
  LOUCURA_DO_AMOR =  "dormi na praça"
 
- p LOUCURA_DO_AMOR
+ p LOUCURA_DO_AMOR 
 
 
 
