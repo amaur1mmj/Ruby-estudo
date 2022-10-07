@@ -7,6 +7,11 @@ p ok
 
 h = Hash.new
 cont = 0 
-p h["primeiro"] = cont += 1
+h['k'] = 1
+
+p  k =  h["k"]+1 
 
 p h["primeiro"] = cont += 1
+
+
+p text.include?('tatta')
