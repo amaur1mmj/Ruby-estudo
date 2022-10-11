@@ -4,7 +4,7 @@ string = "Howdy sit below go going how"
 
 def sub_strings(string, dictionary)
     string_array = string.downcase.split(" ")
-    bag_words = {}
+    words_bag = {}
     cont = 0
 
         dictionary.each do |word|
@@ -12,17 +12,17 @@ def sub_strings(string, dictionary)
             for text in string_array 
                     
                     if text == word
-                        bag_words[word] = cont+=1
+                        words_bag[word] = cont+=1
                     
                     elsif text.include?(word)
-                            bag_words[word] = cont+=1    
+                            words_bag[word] = cont+=1    
                     end
                     
             end
                 cont = 0
         end
 
-return    bag_words
+return    words_bag
 
 end
 

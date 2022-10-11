@@ -7,7 +7,7 @@ p ok
 
 h = Hash.new
 cont = 0 
-h['k'] = 1
+
 
 p  k =  h["k"]+1 
 
