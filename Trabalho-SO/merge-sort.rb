@@ -1,39 +1,57 @@
-def pivot_choice(vetor, first,last)
 
-    pivot = vetor[last]
-    
-    i = first -1
+vetor = [1,3,88,75,32,45,768,2,3,5]
 
-    for j in first...last
+def merge_sort(vetor)
 
-        unless vetor[j] >= pivot
-            i+=1
-            vetor[i],vetor[j] = vetor[j], vetor[i]
+    if vetor.length > 1
+
+        mid = vetor.length / 2 
+
+         low_elements = vetor[...mid]
+
+         high_elements = vetor[mid...]
         
+        merge_sort(low_elements)
+        merge_sort(high_elements)
+       
+
+        i = j = k = 0
+
+        while i < low_elements.length && j < high_elements.length
+            
+            if low_elements[i] <= high_elements[j]
+
+                vetor[k] = low_elements[i]
+                i += 1
+            else
+                vetor[k]= high_elements[j]
+                j += 1
+            end
+
+            k += 1
+        
+        end 
+
+        while i < low_elements.length 
+
+            vetor[k] = low_elements[i]
+            i += 1
+            k += 1
         end
+
+        while j < high_elements.length 
+            
+            vetor[k] = high_elements[j]
+            j += 1
+            k += 1
+
+        end
+
+
     end
-    
-    vetor[i+1], vetor[last] = vetor[last], vetor[i+1]
-    
-    i+1
 
-end
-
-
-def quick_sort(vetor,first, last)
-
-    if first < last
-        pi = pivot_choice(vetor,first, last)
-
-        quick_sort(vetor, first, pi -1)
-
-        quick_sort(vetor, pi+1, last)
-        
-    end
     vetor
 
 end
 
-vetor = [1,23,54,1,3,6,4,7]
-
-p quick_sort(vetor,0, vetor.length-1)
+p merge_sort(vetor)
