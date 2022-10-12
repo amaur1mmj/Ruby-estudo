@@ -1,5 +1,3 @@
-p vetor = [5,3,2,7,4,1,0]
-
 # 
 
 def bubble_sort(vetor)
@@ -22,4 +20,3 @@ def bubble_sort(vetor)
 
 end
 
-p bubble_sort(vetor)

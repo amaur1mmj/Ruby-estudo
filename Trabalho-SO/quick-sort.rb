@@ -3,7 +3,6 @@ def pivot_choice(vetor, first,last)
     pivot = vetor[last]
     
     i = first -1
-    p i
 
     for j in first...last
 
@@ -37,4 +36,4 @@ end
 
 vetor = [1,23,54,1,3,6,4,7]
 
-p quick_sort(vetor,0, vetor.length-1)
+#p quick_sort(vetor,0, vetor.length-1)

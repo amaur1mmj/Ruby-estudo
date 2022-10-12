@@ -1,5 +1,5 @@
 
-p vetor = [1,3,88,75,32,45,768,2,3,5]
+# p vetor = [1,3,88,75,32,45,768,2,3,5]
 
 def merge_sort(vetor)
 
@@ -54,4 +54,4 @@ def merge_sort(vetor)
 
 end
 
-p merge_sort(vetor)
+# p merge_sort(vetor)
