@@ -1,7 +1,7 @@
-# 
+require_relative  'file-read-write'
 
 def bubble_sort(vetor)
-
+    inicio = Time.now
     length = vetor.length
     
     for i in 0...length-1
@@ -15,8 +15,15 @@ def bubble_sort(vetor)
         end
     
     end
+    fim = Time.now
 
-    vetor
-
+    return vetor,fim - inicio
 end
 
+vetor = file_read("cem-mil.txt")
+
+p vetor
+
+vetor2 = bubble_sort(vetor)
+
+file_write("cem-mil.txt",vetor2)

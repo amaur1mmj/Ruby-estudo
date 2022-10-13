@@ -21,6 +21,7 @@ end
 
 
 def quick_sort(vetor,first, last)
+    inicio = Time.now
 
     if first < last
         pi = pivot_choice(vetor,first, last)
@@ -30,10 +31,12 @@ def quick_sort(vetor,first, last)
         quick_sort(vetor, pi+1, last)
         
     end
-    vetor
+    fim = Time.now
+    
+    return vetor, fim - inicio
 
 end
 
-vetor = [1,23,54,1,3,6,4,7]
 
-#p quick_sort(vetor,0, vetor.length-1)
+
+

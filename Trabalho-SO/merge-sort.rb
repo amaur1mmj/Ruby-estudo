@@ -2,6 +2,7 @@
 # p vetor = [1,3,88,75,32,45,768,2,3,5]
 
 def merge_sort(vetor)
+    inicio = Time.now
 
     if vetor.length > 1
 
@@ -50,7 +51,9 @@ def merge_sort(vetor)
 
     end
 
-    vetor
+    fim = Time.now
+
+    return vetor, fim - inicio
 
 end
 
