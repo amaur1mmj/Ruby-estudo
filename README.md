@@ -45,5 +45,5 @@ Assim como o Merge Sort , o QuickSort é um algoritmo de divisão e conquista . 
 
 - Instalar Ruby ou ter instalado na máquina
 
-- no terminal : ruby *path*/app-threads.rb
+- no terminal : ruby Trabalho-SO/app-threads.rb
     
