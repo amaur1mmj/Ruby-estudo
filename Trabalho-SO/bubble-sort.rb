@@ -20,10 +20,12 @@ def bubble_sort(vetor)
     return vetor,fim - inicio
 end
 
-vetor = file_read("cem-mil.txt")
+# teste do bubble pois estava demorando muito!
 
-p vetor
+#vetor = file_read("cem-mil.txt")
 
-vetor2 = bubble_sort(vetor)
+#p vetor
 
-file_write("cem-mil.txt",vetor2)
+#vetor2 = bubble_sort(vetor)
+
+#file_write("cem-mil.txt",vetor2)

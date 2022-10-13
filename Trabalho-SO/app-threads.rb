@@ -3,7 +3,10 @@ require_relative 'merge-sort.rb'
 require_relative 'quick-sort.rb'
 require_relative 'file-read-write.rb'
 
+# vetor com o nome dos arquivos contidos no data-base desordenado 
 files_desordenados  = ["cem.txt","mil.txt","cem-mil.txt"]  #,"cem-mil.txt","um-milhao.txt"
+
+#caminho das pastas para receber posteriormente a indentação do nome do arquivo e armazenar o vetor ordenado no devido lugar
 path_write_bubble = "bubble-ordenacao/"
 path_write_merge = "merge-ordenacao/"
 path_write_quick = "quick-ordenacao/"
@@ -11,6 +14,8 @@ path_write_quick = "quick-ordenacao/"
 
 
 
+# Função responsavel pela leitura e passagem do valor retornado para função de organização e sua escrita.
+# Todas as três funções tem o mesmo esqueleto.
 
 def BS_thread (files,path_write)
    #vetor_desordenado = file_read()
@@ -84,6 +89,7 @@ merge = Thread.new{MS_thread(files_desordenados,path_write_merge)}
 
 quick = Thread.new{QK_thread(files_desordenados,path_write_quick)}
 
+# EXECUTANDO
 
 bubble.join
    

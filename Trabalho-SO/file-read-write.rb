@@ -1,6 +1,4 @@
-#files_read_desordenados  = ["cem.txt","mil.txt","cem-mil","um-milhao.txt"]
-#file_write_ordenados = "Trabalho-SO/db-ordenado/vetor-ordenado.txt"
-
+# Leitura dos aruivos retornando o vetor desorganizado 
 def file_read(file)
 
     begin    
@@ -24,6 +22,7 @@ def file_read(file)
    
 end
 
+# Escrita do arquivo, recebendo o nome do aruiqvo q será gerado e o vetor organizado
 def file_write(file_string, vetor_ordenado)
     
     begin
@@ -34,16 +33,3 @@ def file_write(file_string, vetor_ordenado)
 
     p "Arquivo escrito com Sucesso!"
 end
-
-
-
-#fim = Time.now
-
-#teste = file_read()
-#p teste
-#vetor_ordenado = bubble_sort(teste)
-
-#file_write(file_result,vetor_ordenado)
-
-#File.open("Trabalho-SO/db-ordenado/vetor-ordenado.txt","w"){|f| f.print (vetor_ordenado)}
-        
