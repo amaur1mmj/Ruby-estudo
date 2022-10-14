@@ -22,25 +22,7 @@ def ceasar_cipher(string, shift)
 
 end
 
-#decifrando ...
-def describe_ceasar_cipher(string,shift)
 
-    alphabet = alphabet = alphabet()
-    decoded  = Array.new
-    for i in 0...string.length
-        alphabet.each_with_index do |caracter,index|
-        
-            if caracter == string[i]
-                position = ( index - shift)         
-                    decoded.push(alphabet[position])
-                
-            end
-
-        end
-    end
-    return  decoded.join
-
-end
 
 
 puts "Digite sua mensagem para ser criptografada!!"

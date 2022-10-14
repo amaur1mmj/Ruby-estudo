@@ -1,9 +1,20 @@
 
 def stock_picker(price_array)
+    buy_sale = [] 
 
-    if price_array.min == price_array[-1]
+    for i in 0...price_array.length 
         
+        i+= 1 if price_array.max == price_array[0]
+        for j in 0...price_array.length-i-1
+            
+        
+        
+    
+    
+    
     end
+
+
 
 end
 

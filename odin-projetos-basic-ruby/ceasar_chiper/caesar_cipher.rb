@@ -23,4 +23,6 @@ def cipher_ceaser(text, shift)
 
 end
 
-p cipher_ceaser("ABCxyz",-3)
+p string = cipher_ceaser("Amauri blablabla kkk !!!!",-3)
+
+p cipher_ceaser(string, 3)
