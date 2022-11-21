@@ -29,6 +29,9 @@ p hundreds["new"]
 
 hash = {1=> "boa", :oshi => 77}
 
+kkk = hash.keys
+p kkk[1]
+
 p my_hash["a random word"], hash[:oshi]
 
 #p hash.fetch(3) # retorna um erro caso n encontra uma chave 
